@@ -12,6 +12,6 @@ public static void main(String args[]){
 <br>
 int a = 4;
 <br>
-System.out.println(Math.sqrt());
+System.out.println(Math.sqrt(a));
 <br>
 }
