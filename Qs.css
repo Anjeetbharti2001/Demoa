@@ -28,3 +28,29 @@ div.two{
     border-radius: 40%;
     background-color: rgb(102, 10, 240);
 }
+div.three{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: League sapartan;
+    height:400px;
+    color:#ffa511;
+    font-size:55px;
+    font-weight: 900;
+    letter-spacing: 20px;
+    text-decoration:teal double underline;
+    background-color: rgb(134, 132, 132);
+}
+div.face{
+   font-family: 'Courier New';
+}
+div.face h1{
+    color: #1b74e4;
+}
+.btn1{
+    color: black;
+    background-color: aqua;
+}
+.btn2{
+    background-color: black;
+}
