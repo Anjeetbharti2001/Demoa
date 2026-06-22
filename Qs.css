@@ -1,0 +1,14 @@
+div h2{
+    color:orange;
+}
+div button{
+    color:white;
+    background-color: blue;
+}
+div p{
+    color: white;
+    background-color:black ;
+}
+div{
+    background-color: lightgrey;
+}
