@@ -10,6 +10,7 @@ form{
     height: 630px;
     width: 500px;
     border: 1px solid red;
+     box-shadow: 0  0 5px rgb(212, 22, 22);
 }
 .size{
     font-weight: bold;
@@ -21,4 +22,8 @@ button{
     width: 200px;
     border-radius:5px;
     box-shadow: 0  0 5px rgb(128, 12, 12);
+}
+input{
+    border-radius: 4px;
+     box-shadow: 0  0 5px rgb(194, 101, 101);
 }
