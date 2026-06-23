@@ -7,30 +7,33 @@
     <title>Rgistration Form</title>
     <link rel="stylesheet" href="Rg.css">
 </head>
+
 <body>
     <form action="/server">
         <h1>Student Registration Form </h1>
         <lebel class="size" for="text">Full Name : </lebel>
         <input type="Name" id="name" placeholder="Enter full name">
         <br><br>
-        <lebel  class="size" for="Text">Father Name : </lebel>
+        <lebel class="size" for="Text">Father Name : </lebel>
         <input type="Name" id="name" placeholder="Enter Father Name">
         <br><br>
-        <label  class="size" for="text">Postel Address : </label>
+        <label class="size" for="text">Postel Address : </label>
         <input type="Address" id="address" placeholder="Enter Postel Address">
         <br><br>
-        <label  class="size" for="text">Personal Address</label>
+        <label class="size" for="text">Personal Address</label>
         <input type="address" id="address" placeholder="Personal Address">
         <br><br>
-        <label  class="size" for="text">Gender : </label> &MediumSpace;
-        <label for="Text">Male</label>
-        <input type="radio" id="gender" value="gender">
-        <label for="Text">Female</label>
-        <input type="radio" id="gender" value="gender">
-        <label for="Text">Other</label>
-        <input type="radio" id="gender" value="gender">
-        <br><br>
-        <label  class="size" for="Text">Course Select : </label>
+        <label class="size" for="text">Gender : </label> &MediumSpace;
+        <div class="group">
+            <label for="Text">Male</label>
+            <input type="radio" name="gender" id="male" value="male">
+            <label for="Text">Female</label>
+            <input type="radio" name="gender" id="female" value="female">
+            <label for="Text">Other</label>
+            <input type="radio" name="gender" id="other" value="other">
+        </div>
+        <br>
+        <label class="size" for="Text">Course Select : </label>
         <select id="course name" value="course name">
             <option select="select">--Select your course--</option>
             <option value="course">MBA</option>
@@ -40,7 +43,7 @@
             <option value="COURSE">PHD</option>
         </select>
         <br><br>
-        <label  class="size" for="text">City select : </label>
+        <label class="size" for="text">City select : </label>
         <select id="city" value="city">
             <option select="select">--Select your city--</option>
             <option value="city">Patna</option>
@@ -53,7 +56,7 @@
             <option value="city">Vishakhgapatnam</option>
         </select>
         <br><br>
-        <lebel  class="size" for="text">District : </lebel>
+        <lebel class="size" for="text">District : </lebel>
         <select id="district" value="district">
             <option select="select">--Chhoose your District--</option>
             <option value="district">Amritsar</option>
@@ -69,7 +72,7 @@
             <option value="district">Amaravati</option>
         </select>
         <br><br>
-        <label  class="size" for="text">State : </label>
+        <label class="size" for="text">State : </label>
         <select id="state" value="state">
             <option select="select">--Chhoose your State--</option>
             <option value="state">TamilNaddu</option>
@@ -85,13 +88,13 @@
             <option value="state">Rajsthan</option>
         </select>
         <br><br>
-        <label  class="size" for="text">PinCode : </label>
+        <label class="size" for="text">PinCode : </label>
         <input type="pincode" id="pincode" placeholder="Enter PinCode"><br><br>
-        <label  class="size" for="Text">Email Id : </label>
+        <label class="size" for="Text">Email Id : </label>
         <input type="email Address" id="email" placeholder="email@gamil.com"><br><br>
-        <label  class="size" for="text">Note : </label>
+        <label class="size" for="text">Note : </label>
         <input type="text" id="text" placeholder="test..."><br><br>
-        <label  class="size" for="text">Mobile : </label>
+        <label class="size" for="text">Mobile : </label>
         <input type="Number" id="number" placeholder="number"><br><br>
         <button value="reset">Reset</button> &MediumSpace; <button>Submit Form</button>
     </form>
