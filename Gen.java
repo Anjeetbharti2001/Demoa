@@ -10,11 +10,21 @@
 //     }
 // }
 
-public class Gen{
+// public class Gen{
+//     int p = 20;
+//     public static void main(String args[]){
+//         final Gen t = new Gen();
+//         t.p = 30;
+//         System.out.println(t.p);
+//     }
+// }
+public class Gen {
     int p = 20;
+
     public static void main(String args[]){
-        final Gen t = new Gen();
-        t.p = 30;
-        System.out.println(t.p);
+       final Gen t1 = new Gen();
+       Gen t2 = new Gen();
+       t1 = t2;
+       System.out.println(t1.p);
     }
 }
