@@ -1,30 +1,14 @@
-// public class Gen{
-//     public static void main(String args[]){
-//        final int[] arr = {10, 20, 30};
-       
-//        arr[2] = 99;
-
-//        for(int i = 0; i < arr.length; i++){
-//         System.out.println(arr[i] + " ");
-//        }
-//     }
-// }
-
-// public class Gen{
-//     int p = 20;
-//     public static void main(String args[]){
-//         final Gen t = new Gen();
-//         t.p = 30;
-//         System.out.println(t.p);
-//     }
-// }
-public class Gen {
-    int p = 20;
-
+import java.util.*;
+public class Gen{
     public static void main(String args[]){
-       final Gen t1 = new Gen();
-       Gen t2 = new Gen();
-       t1 = t2;
-       System.out.println(t1.p);
+        PriorityQueue<Integer>minHeap = new PriorityQueue<>();
+        minHeap.add(5);
+        minHeap.add(7);
+        minHeap.add(9);
+        minHeap.add(1);
+
+        System.out.println("Heap : " + minHeap);
+        System.out.println("Smallest Element : " + minHeap.poll());
+        System.out.println("Heap after poll : " + minHeap);
     }
 }
