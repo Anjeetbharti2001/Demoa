@@ -1,14 +1,21 @@
-import java.util.*;
+class Node {
+    int data;
+    Node next;
+    Node(int d){
+        data = d;
+        next = null;
+    }
+}
 public class Gen{
     public static void main(String args[]){
-        PriorityQueue<Integer>minHeap = new PriorityQueue<>();
-        minHeap.add(5);
-        minHeap.add(7);
-        minHeap.add(9);
-        minHeap.add(1);
+        Node heap = new Node(10);
+        head.next = new Node(20);
+        head.next.next = new Node(30);
 
-        System.out.println("Heap : " + minHeap);
-        System.out.println("Smallest Element : " + minHeap.poll());
-        System.out.println("Heap after poll : " + minHeap);
+        Node temp = head;
+        while(temp != null){
+            System.out.print(temp.data + " ");
+            temp = temp.next;
+        }
     }
 }
