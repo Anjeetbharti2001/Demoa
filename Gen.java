@@ -1,21 +1,24 @@
 class Node {
     int data;
-    Node next;
-    Node(int d){
-        data = d;
-        next = null;
+    Node left;
+    Node right;
+
+    Node(int data){
+        this.data = data;
+        this.left = null;
+        this.right = null;
     }
 }
 public class Gen{
     public static void main(String args[]){
-        Node heap = new Node(10);
-        head.next = new Node(20);
-        head.next.next = new Node(30);
+        Node root = new Node(1);
 
-        Node temp = head;
-        while(temp != null){
-            System.out.print(temp.data + " ");
-            temp = temp.next;
-        }
+        root.left = new Node(2);
+        root.right = new Node (3);
+
+        root.left = new Node(4);
+        root.right = new Node(5);
+
+        System.out.println("root : " + root.data);
     }
 }
