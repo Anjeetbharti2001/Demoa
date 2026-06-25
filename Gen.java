@@ -1,33 +1,25 @@
-class Node {
-    int data;
-    Node left, right;
-    Node(int data){
-        this.data = data;
-        left = null;
-        right = null;
+public class Gen {
+    public static void main(String args[]){
+        int nums[] = new int[7];
+        nums[0] = 0;
+        nums[1] = 1;
+        nums[2] = 1;
+        nums[3] = 1;
+        nums [4] = 2;
+        nums[5] = 2;
+        nums[6] = 3;
+        System.out.println(mergeSortedArray(nums));
     }
-}
-public class Gen{
-    // Total nodes count
-    static int countNodes(Node root){
-        if(root == null){
-            return 0;
+    public static int mergeSortedArray(int[]nums){
+        int i = 0;
+        for(int j = 1; j < nums.length; j++){
+           if(nums[i] < nums[i]){
+            int temp = nums[i + 1];
+            nums[i + 1] = nums[j];
+            nums[j] = temp;
+            i++;
+           }
         }
-        return 1 + countNodes(root.left) + countNodes(root.right);
-    }
-    public static void main(String [] args){
-        //tree creation
-        Node root = new Node(1);
-        root.left = new Node(2);
-
-        root.right = new Node(3);
-        root.left.left = new Node(4);
-        root.left.right = new Node(5);
-
-        int nodes = countNodes(root);
-        int edges = nodes - 1;
-
-        System.out.println("Total Nodes = " + nodes);
-        System.out.println("Total Edges = " + edges);
+        return i + 1;
     }
 }
