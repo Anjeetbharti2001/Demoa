@@ -1,17 +1,13 @@
 import java.util.*;
-public class Gen {
+public class Gen{
     public static void main(String args[]){
-        PriorityQueue<Integer>pq = new PriorityQueue<>();
-        pq.add(10);
-        pq.add(20);
-
-        while(!pq.isEmpty()){
-            pq.poll();
+        int [] arr = {4, 2, 7, 1, 3};
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
+        for(int num : arr){
+            pq.add(num);
         }
-        if(pq.isEmpty()){
-            System.out.println("heap is Empty");
-        }else{
-            System.out.println("Heap is not Empty");
+        while(!pq.isEmpty()){
+            System.out.println(pq.poll() + " ");
         }
     }
 }
