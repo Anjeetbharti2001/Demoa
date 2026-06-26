@@ -1,14 +1,11 @@
-public class Gen{
+public class Gen {
     public static void main(String args[]){
-        float p, r, si;
-        int n ;
-        p = 1000.50f;
+        int x, y, z, avg;
+        x = 73;
+        y = 70;
+        z = 65;
 
-        n = 3;
-
-        r = 15.5f;
-
-        si = p* n * r/ 100;
-        System.out.println( "Total simple Interest:- " + si);
+        avg = (x + z + y)/ 3;
+        System.out.println(avg);
     }
 }
