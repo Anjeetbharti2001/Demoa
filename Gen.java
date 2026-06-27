@@ -17,8 +17,7 @@ public class Gen {
         root.right = new Node(3);
         root.left.right = new Node(4);
         root.left.right = new Node(5);
-        System.out.println("Tree created successfull");
-        // Node root = new Node(10);
-        // System.out.println("Root:-" + root.data);
+        
+        System.out.println("Root.left.right data:-" + root.data);
     }
 }
