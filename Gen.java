@@ -1,19 +1,32 @@
-class Node{
+class Node {
     int data;
     Node left, right;
-    Node(int data){
+
+    Node(int data) {
         this.data = data;
         left = null;
         right = null;
     }
 }
 public class Gen {
-    static int height(Node root) {
+    static void printLeaf(Node root) {
+    // 1. Base case: If the current node is null, just go back
     if (root == null) {
-        return 0;
+        return;
     }
-    return 1 + Math.max(height(root.left), height(root.right));
-}    public static void main(String args[]){
+
+    // 2. Leaf check: If it has no children, print it
+    if (root.left == null && root.right == null) {
+        System.out.print(root.data + " ");
+        return; // Optional optimization: no need to check children if it's a leaf
+    }
+
+    // 3. Traversal: Keep looking down both sides of the tree
+    printLeaf(root.left);
+    printLeaf(root.right);
+}
+
+    public static void main(String args[]){
         Node root = new Node(1);
         root.left = new Node(2);
         root.right = new Node(3);
@@ -36,6 +49,6 @@ public class Gen {
         root.right.right.left = new Node(14);
         root.right.right.right = new Node(15);
 
-        System.out.println("Height of Tree :-" + height(root));
-    }
+        printLeaf(root);
+    } 
 }
