@@ -1,25 +1,22 @@
 public class Gen {
-    public static void main(String args[]){
-        int nums[] = new int[7];
-        nums[0] = 0;
-        nums[1] = 1;
-        nums[2] = 1;
-        nums[3] = 1;
-        nums[4] = 2;
-        nums[5] = 2;
-        nums[6] = 3;
-        System.out.println(mergeSortedArray(nums));
-    }
-    public static int mergeSortedArray(int[] nums){
-        int i = 0;
-        for(int j = 1; j<nums.length; j++){
-            if(nums[i] <nums[j]){
-                int temp = nums[i + 1];
-                nums[i + 1] = nums[j];
-                nums[i] = temp;
-                i++;
+    static void bubbleSort(int arr[]){
+        int n = arr.length;
+
+        for(int i = 0; i<n-1; i++){
+            for(int j = 0; j < n - i - 1; j++){
+                if(arr[j] > arr[j + 1]){
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
             }
         }
-        return i + 1;
+    }
+    public static void main(String args[]){
+        int arr[] = {5, 1, 4, 2, 8};
+        bubbleSort(arr);
+        for(int num : arr)
+            System.out.print(num + " ");
+
     }
 }
