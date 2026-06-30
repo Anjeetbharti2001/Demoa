@@ -1,16 +1,14 @@
 import java.util.*;
 public class Gen{
     public static void main(String args[]){
-        HashMap<Integer, String> map = new HashMap<>();
+        HashSet<Integer> set = new HashSet<>();
 
-        map.put(101,  "Anjeet");
-        map.put(102, "Rahul");
-        map.put(103, "Amit");
+       set.add(10);
+       set.add(20);
+       set.add(30);
+       set.add(10);
 
-        System.out.println(map);
-
-        // Acess value
-        System.out.println(map.get(101));
+        System.out.println(set);
 
     }
 }
