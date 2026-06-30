@@ -1,14 +1,9 @@
 import java.util.*;
 public class Gen{
     public static void main(String args[]){
-        HashSet<Integer> set = new HashSet<>();
-
-       set.add(10);
-       set.add(20);
-       set.add(30);
-       set.add(10);
-
-        System.out.println(set);
-
+        Queue<Integer> q = new LinkedList<>();
+        if(q.isEmpty()){
+            System.out.println("Queue is Empty");
+        }
     }
 }
