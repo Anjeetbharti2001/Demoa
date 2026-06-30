@@ -8,6 +8,13 @@ class Node {
     }
 }
 public class Gen{
+    static int countNodes(Node root){
+        if(root == null){
+            return 0;
+        }
+        return 1 + countNodes(root.left) + countNodes(root.right);
+
+    }
     public static void main(String args[]){
         Node root = new Node(1);
 
@@ -20,6 +27,6 @@ public class Gen{
         root.right.left = new Node(6);
         root.right.right = new Node(7);
 
-        System.out.println("Root print:-" + root.data);
+        System.out.println("Total node print:-" + countNodes(root));
     }
 }
