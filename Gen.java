@@ -1,9 +1,9 @@
-import java.util.*;
-public class Gen{
+public class Gen {
     public static void main(String args[]){
-        Queue<Integer> q = new LinkedList<>();
-        if(q.isEmpty()){
-            System.out.println("Queue is Empty");
-        }
+        message();
+        System.out.println("CRY, and you stop the monotony!");
+    }
+    static void message(){
+        System.out.println("Smile the world smailes with you..");
     }
 }
