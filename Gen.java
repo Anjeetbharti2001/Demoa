@@ -1,32 +1,16 @@
-class Node {
-    int data;
-    Node left, right;
-    Node(int data){
-        this.data = data;
-        left = null;
-        right = null;
-    }
-}
+import java.util.*;
 public class Gen{
-    static int countNodes(Node root){
-        if(root == null){
-            return 0;
-        }
-        return 1 + countNodes(root.left) + countNodes(root.right);
-
-    }
     public static void main(String args[]){
-        Node root = new Node(1);
+        HashMap<Integer, String> map = new HashMap<>();
 
-        root.left = new Node(2);
-        root.right = new Node(3);
+        map.put(101,  "Anjeet");
+        map.put(102, "Rahul");
+        map.put(103, "Amit");
 
-        root.left.left = new Node(4);
-        root.left.right = new Node(5);
+        System.out.println(map);
 
-        root.right.left = new Node(6);
-        root.right.right = new Node(7);
+        // Acess value
+        System.out.println(map.get(101));
 
-        System.out.println("Total node print:-" + countNodes(root));
     }
 }
