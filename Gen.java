@@ -1,39 +1,25 @@
-// Quick Sort 
-public class Gen {
-    static int partition(int arr[], int low, int high){
-        int pivot = arr[high];
-        int i = low - 1; 
-
-        for(int j = low; j < high; j++){
-            if(arr[j] < pivot){
-                i++;
-
-                int temp = arr[i];
-                arr[i] = arr[j];
-                arr[j] = temp;
-            }
-        }
-        int temp = arr[i + 1];
-        arr[i + 1 ] = arr[high];
-        arr[high] = temp;
-
-        return i + 1;
+class Node {
+    int data;
+    Node left, right;
+    Node(int data){
+        this.data = data;
+        left = null;
+        right = null;
     }
-
-    static void quickSort(int arr[], int low, int high){
-        if(low < high){
-            int pi = partition(arr, low, high);
-
-            quickSort(arr, low, pi - 1);
-            quickSort(arr, pi + 1, high);
-        }
-    }
+}
+public class Gen{
     public static void main(String args[]){
-        int arr[] = {10, 7, 8, 9, 1, 5};
+        Node root = new Node(1);
 
-        quickSort(arr, 0, arr.length - 1);
-        for(int num : arr){
-            System.out.print(num + " ");
-        }
+        root.left = new Node(2);
+        root.right = new Node(3);
+
+        root.left.left = new Node(4);
+        root.left.right = new Node(5);
+
+        root.right.left = new Node(6);
+        root.right.right = new Node(7);
+
+        System.out.println("Root print:-" + root.data);
     }
 }
