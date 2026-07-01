@@ -7,26 +7,24 @@ class Node {
         right = null;
     }
 }
-public class Gen {
-    static int countNode(Node root){
-        if(root == null){
-            return 0;
+public class Gen{
+     static int height(Node root){
+            if(root == null){
+                return 0;
+            }
+            return 1 + Math.max(height(root.left), height(root.right));
         }
-        return 1 + countNode(root.left) + countNode(root.right);
-    }
     public static void main(String args[]){
-        Node root = new Node(9);
+       Node root = new Node(4);
 
-        root.left = new Node(10);
-        root.right = new Node(11);
+       root.left = new Node(5);
+       root.right = new Node(6);
 
-        root.left.left = new Node(12);
-        root.left.right = new Node(13);
+       root.left.left = new Node(7);
+       root.left.right = new Node(8);
 
-        root.right.left = new Node(14);
-        root.right.right = new Node(15);
-       
-        System.out.println("Total Node print :- " + countNode(root));
-        System.out.println("Print root:-" + root.data);
+       root.right.left = new Node(9);
+       root.right.right = new Node(10);
+       System.out.println("Total Height of Tree:-" + height(root));
     }
 }
