@@ -27,5 +27,6 @@ public class Gen {
         root.right.right = new Node(15);
        
         System.out.println("Total Node print :- " + countNode(root));
+        System.out.println("Print root:-" + root.data);
     }
 }
