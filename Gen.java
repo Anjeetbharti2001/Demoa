@@ -1,4 +1,4 @@
-class Node{
+class Node {
     int data;
     Node left, right;
     Node(int data){
@@ -15,9 +15,17 @@ public class Gen {
         return 1 + countNode(root.left) + countNode(root.right);
     }
     public static void main(String args[]){
-         Node root = new Node(1);
-         root.left = new Node(2);
-         root.right = new Node(3);
-         System.out.println("Print total Node:-" + countNode(root));
+        Node root = new Node(9);
+
+        root.left = new Node(10);
+        root.right = new Node(11);
+
+        root.left.left = new Node(12);
+        root.left.right = new Node(13);
+
+        root.right.left = new Node(14);
+        root.right.right = new Node(15);
+       
+        System.out.println("Total Node print :- " + countNode(root));
     }
 }
