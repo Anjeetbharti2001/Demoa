@@ -1,14 +1,15 @@
+// create a program that calculates the average of different ages
 public class Gen {
     public static void main(String args[]){
-        int [] numbers = {1, 5, 10, 25};
+        int ages[] = {20, 22, 18, 35, 48, 26, 87, 70};
 
-        int sum = 0;
-
-        // loops through the arrays and add each element to sum 
-        for(int i = 0; i< numbers.length; i++){
-            sum += numbers[i];
+        float avg, sum = 0;
+        // Get the length of the arrays 
+        int length = ages.length;
+        for(int age : ages){
+            sum += age;
         }
-
-        System.out.println("The sum is :-" + sum );
+        avg = sum / length;
+        System.out.println("the average age is :-" + avg);
     }
 }
