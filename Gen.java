@@ -1,11 +1,11 @@
-public class Gen {
+public class Gen{
     public static void main(String args[]){
-        int arr[] = {8,0,3,1,8};
-        
-        System.out.println("Arrays element :-");
+        // Traversing an Arrays in reverse
+        int [] arr = {4,6,8,2,4};
+        System.out.println("Reverse travesal:-");
 
-        for(int num : arr){
-            System.out.println(num);
+        for(int i = arr.length-1; i >= 0; i--){
+            System.out.println(arr[i]);
         }
     }
 }
