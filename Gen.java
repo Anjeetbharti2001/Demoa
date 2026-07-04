@@ -1,17 +1,20 @@
+// Create a program that keeps track of the highest and lowest values in array:
 public class Gen {
-    public static void main(String[] args) {
-        int[] numbers = {3, -1, 7, 0, 9};
+    public static void main(String args[]){
+        int [] numbers = {45, 12, 98, 33, 27};
 
-        for (int n : numbers) {
-            if (n < 0) {
-                continue; // Skip negative numbers
+        int max = numbers[0];
+        int min = numbers[0];
+
+        for(int n : numbers){
+            if(n > max){
+                max = n ;
             }
-
-            if (n == 0) {
-                break; // Stop the loop when 0 is found
+            if(n < min){
+                min = n;
             }
-
-            System.out.println(n);
         }
+        System.out.println("Max: " + max);
+        System.out.println("Min:" + min);
     }
 }
