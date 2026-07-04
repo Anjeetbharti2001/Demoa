@@ -1,20 +1,10 @@
-// Create a program that keeps track of the highest and lowest values in array:
+// Create a program that print the seat number in a theater row , showing both the seat number and who is sitting there
 public class Gen {
     public static void main(String args[]){
-        int [] numbers = {45, 12, 98, 33, 27};
+        String[] seats = {"jenny", "Liam", "Angie", "Bo"};
 
-        int max = numbers[0];
-        int min = numbers[0];
-
-        for(int n : numbers){
-            if(n > max){
-                max = n ;
-            }
-            if(n < min){
-                min = n;
-            }
+        for(int i = 0; i<seats.length; i++){
+            System.out.println("Seat number " + i + "is taken by " + seats[i]);
         }
-        System.out.println("Max: " + max);
-        System.out.println("Min:" + min);
     }
 }
