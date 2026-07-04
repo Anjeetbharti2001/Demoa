@@ -1,24 +1,17 @@
-import java.util.*;
-
 public class Gen {
-    public static void main(String args[]) {
-        Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) {
+        int[] numbers = {3, -1, 7, 0, 9};
 
-        System.out.print("Enter Size of array: ");
-        int n = sc.nextInt();
+        for (int n : numbers) {
+            if (n < 0) {
+                continue; // Skip negative numbers
+            }
 
-        int[] arr = new int[n];
+            if (n == 0) {
+                break; // Stop the loop when 0 is found
+            }
 
-        System.out.println("Enter array elements:");
-        for (int i = 0; i < n; i++) {
-            arr[i] = sc.nextInt();
+            System.out.println(n);
         }
-
-        System.out.println("Array Elements:");
-        for (int i = 0; i < n; i++) {
-            System.out.println(arr[i]);
-        }
-
-        sc.close();
     }
 }
