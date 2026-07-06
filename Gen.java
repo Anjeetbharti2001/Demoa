@@ -1,9 +1,11 @@
 public class Gen {
-    static void welcomeMessage(){
-        System.out.println("Welcome to Java programming !");
+    static void myMethod(String fname){
+        System.out.println(fname + "Refsnes");
     }
     public static void main(String args[]){
-        welcomeMessage();
+        myMethod("anjeet");
+        myMethod("Bharti");
+        myMethod("dear");
 
     }
 }
