@@ -1,12 +1,9 @@
 public class Gen {
-    static void myMethod(){
-        System.out.print("I just got excutes:-");
-        System.out.println("I anjeet bharti");
-        System.out.println("How are today dear");
+    static void welcomeMessage(){
+        System.out.println("Welcome to Java programming !");
     }
     public static void main(String args[]){
-         myMethod();
-         myMethod();
-         myMethod();
+        welcomeMessage();
+
     }
 }
