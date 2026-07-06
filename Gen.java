@@ -1,8 +1,15 @@
 public class Gen {
-    public static void main(String args[]){
-        int myNumbers[][] = {{1,4,2}, {3,6,8, 5, 2}};
-       System.out.println("Rows: " + myNumbers.length);
-       System.out.println("Cols in Rows 0: " + myNumbers[0].length);
-       System.out.println("Cols in row 1 :" + myNumbers[1].length);
+    public static void main(String[] args) {
+
+        int myNumbers[][] = {
+            {1, 4, 2},
+            {3, 6, 8, 5, 2}
+        };
+
+        for (int row = 0; row < myNumbers.length; row++) {
+            for (int col = 0; col < myNumbers[row].length; col++) {
+                System.out.println("myNumbers[" + row + "][" + col + "] = " + myNumbers[row][col]);
+            }
+        }
     }
 }
