@@ -1,14 +1,12 @@
 public class Gen {
-    public static void main(String[] args) {
-
-        int myNumbers[][] = {
-                { 1, 4, 2 },
-                { 3, 6, 8, 5, 2 }
-        };
-        for (int[] row : myNumbers) {
-            for (int num : row) {
-                System.out.println(num);
-            }
-        }
+    static void myMethod(){
+        System.out.print("I just got excutes:-");
+        System.out.println("I anjeet bharti");
+        System.out.println("How are today dear");
+    }
+    public static void main(String args[]){
+         myMethod();
+         myMethod();
+         myMethod();
     }
 }
