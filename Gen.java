@@ -1,22 +1,32 @@
-// User Input and Traversal
-import java.util.*;
 public class Gen {
+    static int binarySearch(int arr[], int target){
+        int left = 0; 
+        int right = arr.length - 1;
+        while(left <= right){
+            int mid = left + (right - left)/2;
+            if(arr[mid] == target){
+                return mid;
+            }
+            else if(arr[mid] < target){
+                left = mid + 1;
+            }else if(arr[mid] < target){
+                left = mid + 1;
+            }else{
+                right = mid -1;
+            }
+        }
+        return - 1;
+    }
     public static void main(String args[]){
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter Size of Arrays:");
-        int n = sc.nextInt();
+        int arr[] = {10, 20, 30, 40, 60, 70};
+        int target = 50;
 
-        int [] arr = new int[n];
-
-        System.out.println("Enter Arrays element :-");
-        for(int i = 0; i<n; i++){
-            arr[i] = sc.nextInt();
+        int index = binarySearch(arr, target);
+        if(index != -1){
+            System.out.println("Element found at index : " + index);
+        }else{
+            System.out.println("Element not found");
         }
-        System.out.println("Arrays Element:-");
-
-        for(int i=0; i<n; i++){
-            System.out.println(arr[i]);
-        }
-        sc.close();
+        
     }
 }
