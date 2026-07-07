@@ -1,11 +1,11 @@
+// Traversal in arrays using for loops
 public class Gen {
-    static void myMethod(String fname){
-        System.out.println(fname + "Refsnes");
-    }
     public static void main(String args[]){
-        myMethod("anjeet");
-        myMethod("Bharti");
-        myMethod("dear");
+        int [] arr = {10, 20, 30, 40, 50};
+        System.out.println("Arrays element :-");
 
+        for(int i = 0; i<arr.length; i++){
+            System.out.println(arr[i]);
+        }
     }
 }
