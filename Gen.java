@@ -1,29 +1,14 @@
-class Node {
-        int data;
-        Node right, left;
-
-        Node(int data) {
-            this.data = data;
-            left = null;
-            right = null;
-        }
+public class Gen{
+    static int plusMethod(int x, int y){
+        return x + y;
     }
-public class Gen {
-    static void printLeaf(Node root){
-        if(root == null){
-            return ;
-        }
-        if(root.left == null && root.right == null);
-        System.out.print(root.data + " ");
-
-        printLeaf(root.left);
-        printLeaf(root.right);
+    static double plusMethod(double x, double y){
+        return x + y;
     }
-    public static void main(String args[]) {
-        Node root = new Node(1);
-        root.left = new Node(2);
-        root.right = new Node(3);
-
-        printLeaf(root);
+    public static void main(String args[]){
+         int myNum1 = plusMethod(8, 5);
+         double myNum2 = plusMethod(4.3, 6.26);
+         System.out.println("int : " + myNum1);
+         System.out.println("Double : " + myNum2);
     }
 }
