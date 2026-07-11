@@ -1,14 +1,13 @@
-public class Gen{
-    static int plusMethod(int x, int y){
-        return x + y;
-    }
-    static double plusMethod(double x, double y){
-        return x + y;
+public class Gen {
+    public static int sum(int k){
+        if(k > 0){
+            return k + sum(k - 1);
+        }else{
+            return 0;
+        }
     }
     public static void main(String args[]){
-         int myNum1 = plusMethod(8, 5);
-         double myNum2 = plusMethod(4.3, 6.26);
-         System.out.println("int : " + myNum1);
-         System.out.println("Double : " + myNum2);
+        int result = sum(10);
+        System.out.println(result);
     }
 }
