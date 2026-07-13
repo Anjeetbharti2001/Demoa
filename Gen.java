@@ -1,13 +1,16 @@
 public class Gen {
-    public static int sum(int k){
-        if(k > 0){
-            return k + sum(k - 1);
-        }else{
-            return 0;
+    public static int removeDuplicates(int[] arr){
+        int i = 0;
+        for(int j = 1; j<arr.length; j++){
+            if(arr[i] != arr[j]){
+                i++;
+                arr[i] = arr[j];
+            }
         }
+        return i + 1;
     }
     public static void main(String args[]){
-        int result = sum(10);
-        System.out.println(result);
+        int [] arr = {1, 1, 2, 2, 3, 4, 4};
+        System.out.println(removeDuplicates(arr));
     }
 }
