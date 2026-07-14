@@ -1,16 +1,15 @@
 public class Gen{
     public static void main(String args[]){
-        int [] arr = {10, 20, 30, 40, 50};
-        int key = 30;
+        int [] arr = {5, 8, 12, 20};
+        int key = 12;
+        boolean found = false;
 
-        int index = -1;
-
-        for(int i = 0; i<arr.length; i++){
-            if(arr[i] == key ){
-                index = i;
+        for(int num : arr){
+            if(num == key){
+                found = true;
                 break;
             }
         }
-        System.out.println(index);
+        System.out.println(found);
     }
 }
