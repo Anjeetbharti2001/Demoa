@@ -1,15 +1,13 @@
 public class Gen{
     public static void main(String args[]){
-        int [] arr = {5, 8, 12, 20};
-        int key = 12;
-        boolean found = false;
-
+        int [] arr = {3, 4, 3, 6, 3, 8};
+        int key = 3;
+        int count = 0; 
         for(int num : arr){
             if(num == key){
-                found = true;
-                break;
+                count++;
             }
         }
-        System.out.println(found);
+        System.out.println(count);
     }
 }
