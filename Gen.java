@@ -1,13 +1,12 @@
 public class Gen{
     public static void main(String args[]){
-        int [] arr = {3, 4, 3, 6, 3, 8};
-        int key = 3;
-        int count = 0; 
-        for(int num : arr){
-            if(num == key){
-                count++;
+        int[]arr = {3, 5, 7, 5, 9};
+        int key = 5; 
+        for(int i = 0; i<arr.length; i++){
+            if(arr[i] == key){
+                System.out.println(i);
+                break;
             }
         }
-        System.out.println(count);
     }
 }
