@@ -1,27 +1,31 @@
 public class Gen {
+    public static int removeDuplicates(int[] arr) {
+        if (arr.length == 0) {
+            return 0;
+        }
 
-    public static void findPair(int[] arr, int target) {
-        int left = 0;
-        int right = arr.length - 1;
+        int i = 0;
 
-        while (left < right) {
-            int sum = arr[left] + arr[right];
-
-            if (sum == target) {
-                System.out.println("Pair found: " + arr[left] + " + " + arr[right] + " = " + target);
-                return;
-            } else if (sum < target) {
-                left++;
-            } else {
-                right--;
+        for (int j = 1; j < arr.length; j++) {
+            if (arr[i] != arr[j]) {
+                i++;
+                arr[i] = arr[j];
             }
         }
 
-        System.out.println("No pair found.");
+        return i + 1;
     }
 
     public static void main(String[] args) {
-        int[] arr = {1, 2, 3, 4, 6};
-        findPair(arr, 6);
+        int[] arr = {1, 1, 2, 2, 3, 4, 4};
+
+        int length = removeDuplicates(arr);
+
+        System.out.println("Length: " + length);
+
+        System.out.print("Array: ");
+        for (int k = 0; k < length; k++) {
+            System.out.print(arr[k] + " ");
+        }
     }
 }
