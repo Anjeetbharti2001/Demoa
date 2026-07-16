@@ -1,16 +1,27 @@
 public class Gen {
-    public static void main(String args[]){
-        String str = "Anjeet";
-        char target = 't';
 
-        boolean found = false;
+    // Method to reverse the array
+    static void reverse(int[] arr) {
+        int left = 0;
+        int right = arr.length - 1;
 
-        for(int i = 0; i<str.length(); i++){
-            if(str.charAt(i) == target){
-                found = true;
-                break;
-            }
+        while (left < right) {
+            int temp = arr[left];
+            arr[left] = arr[right];
+            arr[right] = temp;
+
+            left++;
+            right--;
         }
-        System.out.println(found);
+
+        // Print reversed array
+        for (int num : arr) {
+            System.out.print(num + " ");
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {10, 30, 40, 60, 70, 90};
+        reverse(arr);
     }
 }
