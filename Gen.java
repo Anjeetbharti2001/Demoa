@@ -1,31 +1,24 @@
 public class Gen {
-    public static int removeDuplicates(int[] arr) {
-        if (arr.length == 0) {
-            return 0;
-        }
+    public static void moveZeros(int[] arr) {
+        int j = 0;
 
-        int i = 0;
-
-        for (int j = 1; j < arr.length; j++) {
-            if (arr[i] != arr[j]) {
-                i++;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] != 0) {
+                int temp = arr[i];
                 arr[i] = arr[j];
+                arr[j] = temp;
+                j++;
             }
         }
 
-        return i + 1;
+        // Print the array
+        for (int x : arr) {
+            System.out.print(x + " ");
+        }
     }
 
-    public static void main(String[] args) {
-        int[] arr = {1, 1, 2, 2, 3, 4, 4};
-
-        int length = removeDuplicates(arr);
-
-        System.out.println("Length: " + length);
-
-        System.out.print("Array: ");
-        for (int k = 0; k < length; k++) {
-            System.out.print(arr[k] + " ");
-        }
+    public static void main(String args[]) {
+        int[] arr = {0, 1, 0, 3, 1, 2};
+        moveZeros(arr);
     }
 }
