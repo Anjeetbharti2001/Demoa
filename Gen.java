@@ -1,20 +1,27 @@
 public class Gen {
-    public static boolean isPalindrome(int[] arr) {
+
+    public static void findPair(int[] arr, int target) {
         int left = 0;
         int right = arr.length - 1;
 
         while (left < right) {
-            if (arr[left] != arr[right]) {
-                return false;
+            int sum = arr[left] + arr[right];
+
+            if (sum == target) {
+                System.out.println("Pair found: " + arr[left] + " + " + arr[right] + " = " + target);
+                return;
+            } else if (sum < target) {
+                left++;
+            } else {
+                right--;
             }
-            left++;
-            right--;
         }
-        return true;
+
+        System.out.println("No pair found.");
     }
 
-    public static void main(String args[]) {
-        int[] arr = { 1, 2, 3, 2, 1 };
-        System.out.println(isPalindrome(arr));
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 4, 6};
+        findPair(arr, 6);
     }
 }
