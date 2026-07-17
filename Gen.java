@@ -3,10 +3,17 @@ public class Gen{
     public static void main(String args[]){
         Set<String> ts = new TreeSet<>();
 
-        ts.add("anjeet");
-        ts.add(" bharti");
-        ts.add("geeks");
+        ts.add("bharat");
+        ts.add("india");
+        ts.add("Nepal");
+        ts.add("A");
+        ts.add("B");
+        ts.add("Z");
 
-        System.out.println(ts);
+        for(String value : ts){
+            System.out.println(value + " ,");
+        }
+        System.out.println();
+
     }
 }
