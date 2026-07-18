@@ -1,19 +1,23 @@
-public class Gen {
-    public static boolean isPalindrome(int []arr){
-        int left = 0;
-        int right = arr.length -1;
+public class Gen{
+    public static int majorityElement(int[]nums){
+        int candidate = 0;
+        int count = 0;
 
-        while(left < right){
-            if(arr[left] != arr[right]){
-                return false;
+        for(int num : nums){
+            if(count == 0){
+                candidate = num;
             }
-            left++;
-            right--;
+            if(num == candidate){
+                count++;
+            }else {
+                count--;
+            }
         }
-        return true;
+        return candidate;
     }
     public static void main(String args[]){
-        int [] arr = {1, 2, 3, 2, 1};
-        System.out.println(isPalindrome(arr));
+        int [] arr = {2, 2, 1, 1, 1, 2, 2};
+
+        System.out.println("Majority Element : " + majorityElement(arr));
     }
 }
