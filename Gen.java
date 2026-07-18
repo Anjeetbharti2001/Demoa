@@ -1,22 +1,19 @@
 public class Gen {
-    public static void findPair(int [] arr, int target){
+    public static boolean isPalindrome(int []arr){
         int left = 0;
-        int right = arr.length - 1;
+        int right = arr.length -1;
 
         while(left < right){
-            int sum = arr[left] + arr[right];
-            if(sum == target){
-                System.out.println(arr[left] + " " + arr[right]);
-                return;
-            }else if(sum < target){
-                left++;
-            }else{
-                right--;
+            if(arr[left] != arr[right]){
+                return false;
             }
+            left++;
+            right--;
         }
+        return true;
     }
     public static void main(String args[]){
-        int[] arr = {1, 2, 3,4 , 6};
-        findPair(arr, 6);
+        int [] arr = {1, 2, 3, 2, 1};
+        System.out.println(isPalindrome(arr));
     }
 }
