@@ -2,19 +2,18 @@ public class Gen {
     public static void main(String args[]){
         int [] arr = {5, 2, 8, 1, 9};
 
-        for(int i = 0; i<arr.length - 1; i++){
-            int minIndex = i;
+        for(int i = 1; i<arr.length; i++){
+            int key = arr[i];
+            int j = i - 1;
 
-            for(int j = i + 1; j<arr.length; j++){
-                if(arr[j] < arr[minIndex]);
-                minIndex = j;
+            while(j >= 0 && arr[i] > key){
+                arr[j + 1] = arr[j];
+                j--;
             }
-            int temp = arr[i];
-            arr[i] = arr[minIndex];
-            arr[minIndex] = temp;
+            arr[j + 1] = key;
         }
         for(int num : arr){
-            System.out.println(num + " ");
+            System.out.print(num + " ");
         }
     }
 }
