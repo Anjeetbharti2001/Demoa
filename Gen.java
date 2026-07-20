@@ -1,6 +1,6 @@
-public class Gen {
+public class Gen{
     public static void main(String args[]){
         String str = "Anjeet Bharti";
-        System.out.println(str.charAt(7));
+        System.out.println(str.substring(0, 6));
     }
 }
