@@ -1,6 +1,6 @@
-public class Gen{
+public class Gen {
     public static void main(String args[]){
         String str = "Anjeet Bharti";
-        System.out.println(str.substring(0, 6));
+        System.out.println(str.contains("Anjeet"));
     }
 }
