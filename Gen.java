@@ -1,12 +1,19 @@
-// import java.util.*;
 public class Gen {
-    int x = 5;
-    public static void main(String args[]){
-        Gen myObj1 = new Gen();
-         Gen myObj2 = new Gen();
-        
-        
-        System.out.println(myObj1.x);
-         System.out.println(myObj2.x);
+    public static void main(String args[]) {
+        int i = 2;
+        switch (i) {
+            case 1:
+                System.out.println("I am in Case 1");
+                break;
+            case 2:
+                System.out.println("I am in case 2");
+                break;
+            case 3:
+                System.out.println("I am in case 3");
+                break;
+            default:
+                System.out.println("I am in default ");
+                break;
+        }
     }
 }
