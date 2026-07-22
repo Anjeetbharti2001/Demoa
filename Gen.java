@@ -1,9 +1,11 @@
 public class Gen {
-    static void myMethod(){
-        System.out.println("Anjeet Bharti");
+    int x;
+    public Gen(){
+        x = 5;
     }
     public static void main(String args[]){
-        myMethod();
-        
+        Gen myObj = new Gen();
+        System.out.println(myObj.x);
+
     }
 }
