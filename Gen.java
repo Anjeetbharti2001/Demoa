@@ -1,14 +1,12 @@
-public class Gen {
-    int modelYear;
-    String modelName;
+public class Gen{
+   
 
-    public Gen(int year, String name){
-        modelYear = year;
-        modelName = name;
-    }
     public static void main(String args[]){
-        Gen myCar = new Gen(1969, "Mustang");
-        System.out.println(myCar.modelYear + " " + myCar.modelName);
+         int arr[] = {4,6,8,9};
+         System.out.println("Arrays Element ");
+         for(int num : arr){
+            System.out.print(num + " ");
+         }
 
     }
 }
