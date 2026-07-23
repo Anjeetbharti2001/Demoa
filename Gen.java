@@ -1,36 +1,12 @@
-import java.util.*;
+public class Gen{
+    public static void main(String args[]){
+        String str = "madam";
+        String rev = new StringBuilder(str).reverse().toString();
 
-public class Gen {
-
-    public static boolean isAnagram(String str1, String str2) {
-
-        // Remove spaces and convert to lowercase
-        str1 = str1.replaceAll("\\s", "").toLowerCase();
-        str2 = str2.replaceAll("\\s", "").toLowerCase();
-
-        // If length is different, not anagram
-        if (str1.length() != str2.length()) {
-            return false;
+        if(str.equals(rev)){
+            System.out.println("Palindrom");
+        }else{
+            System.out.println("nOT pALINDROME");
         }
-
-        int[] count = new int[26];
-
-        for (int i = 0; i < str1.length(); i++) {
-            count[str1.charAt(i) - 'a']++;
-            count[str2.charAt(i) - 'a']--;
-        }
-
-        for (int c : count) {
-            if (c != 0) {
-                return false;
-            }
-        }
-
-        return true; // Both strings are anagrams
-    }
-
-    public static void main(String[] args) {
-        System.out.println(isAnagram("listen", "silent"));
-        System.out.println(isAnagram("Hello", "world"));
     }
 }
