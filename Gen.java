@@ -1,12 +1,20 @@
-public class Gen{
-    public static void main(String args[]){
-        String str = "madam";
-        String rev = new StringBuilder(str).reverse().toString();
+public class Gen {
+    public static boolean isPalindrome(String str){
+        int left = 0;
+        int right = str.length() - 1;
 
-        if(str.equals(rev)){
-            System.out.println("Palindrom");
-        }else{
-            System.out.println("nOT pALINDROME");
+        while(left < right){
+            if(str.charAt(left) != str.charAt(right)){
+                return false;
+            }
+            left++;
+            right--;
         }
+        return true;
+
+    }
+    public static void main(String args[]){
+        String str = "Madam";
+        System.out.println(isPalindrome(str));
     }
 }
