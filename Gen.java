@@ -1,18 +1,18 @@
-class Student {
-    public Student() {
-    }
-}
+public class Gen implements Cloneable {
 
-public class Gen {
+    String name = "Anjeet Bharti";
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
+
     public static void main(String[] args) {
         try {
-            Class<?> c = Class.forName("Student");
+            Gen g1 = new Gen();
+            Gen g2 = (Gen) g1.clone();
 
-            Student s = (Student) c
-                    .getDeclaredConstructor()
-                    .newInstance();
-
-            System.out.println(s);
+            System.out.println(g2.name);
 
         } catch (Exception e) {
             e.printStackTrace();
