@@ -1,20 +1,16 @@
-public class Gen {
-    public static boolean isPalindrome(String str){
-        int left = 0;
-        int right = str.length() - 1;
+class Student {
+    int id;
+    String n;
 
-        while(left < right){
-            if(str.charAt(left) != str.charAt(right)){
-                return false;
-            }
-            left++;
-            right--;
-        }
-        return true;
-
+    public Student(int id, String n){
+        this.id = id;
+        this.n = n;
     }
-    public static void main(String args[]){
-        String str = "Madam";
-        System.out.println(isPalindrome(str));
+}
+public class Gen {
+    public static void main(String [] args){
+        Student s1 = new Student(10, "Alice");
+        System.out.println(s1.id);
+        System.out.println(s1.n);
     }
 }
