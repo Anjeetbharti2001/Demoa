@@ -1,21 +1,13 @@
-public class Gen implements Cloneable {
+import java.util.*;
+public class Gen {
+    public static void main(String args[]){
+        char ch = 'a';
 
-    String name = "Anjeet Bharti";
+        Character c = ch;
 
-    @Override
-    protected Object clone() throws CloneNotSupportedException {
-        return super.clone();
-    }
+        ArrayList<Integer> list = new ArrayList<>();
+        list.add(25);
+        System.out.println(list.get(0));
 
-    public static void main(String[] args) {
-        try {
-            Gen g1 = new Gen();
-            Gen g2 = (Gen) g1.clone();
-
-            System.out.println(g2.name);
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
 }
