@@ -1,13 +1,6 @@
-import java.util.*;
 public class Gen {
     public static void main(String args[]){
-        char ch = 'a';
-
-        Character c = ch;
-
-        ArrayList<Integer> list = new ArrayList<>();
-        list.add(25);
-        System.out.println(list.get(0));
-
+        int x = 100;
+        System.out.println(x);
     }
 }
