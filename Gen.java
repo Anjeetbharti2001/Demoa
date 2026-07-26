@@ -1,10 +1,21 @@
+import java.util.Scanner;
+
 public class Gen {
     public static void main(String args[]){
-        int [] arr = {1,4,6,8,9};
-        System.out.println("Reverse Traversal:-");
+        Scanner sc = new Scanner(System.in);
 
-        for(int i = arr.length - 1; i>= 0; i--){
-            System.out.println(arr[i]);
+        System.out.println("Enter Size Of an Arrays:-");
+        int n = sc.nextInt();
+
+        int []arr = new int[n];
+        System.out.println("Enter arrays element :-");
+
+        for(int i = 0; i<n; i++){
+            arr[i] = sc.nextInt();
+        }
+
+        for(int i = 0; i<n; i++){
+            System.out.print(arr[i] + " ");
         }
     }
 }
