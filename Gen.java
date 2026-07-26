@@ -1,16 +1,13 @@
-public class Gen {
+import java.util.*;
+public class Gen{
     public static void main(String args[]){
-        StringBuilder sb = new StringBuilder("Anjeet");
+        String str = "BHarti";
 
-        // add text
-        sb.append("java");
+        HashMap <Character, Integer> map = new HashMap<>();
 
-        // Insert text
-        sb.insert(6, "life");
-
-        //Reverse string 
-        sb.reverse();
-
-        System.out.println(sb);
+        for(char ch : str.toCharArray()){
+            map.put(ch, map.getOrDefault(ch, 0) + 1);
+        }
+        System.out.println(map);
     }
 }
