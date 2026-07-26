@@ -1,7 +1,10 @@
 public class Gen {
-    int x = 5;
     public static void main(String args[]){
-        Gen myObj = new Gen();
-        System.out.println(myObj.x);
+        int [] arr = {40, 60, 20, 10};
+        System.out.println("Arrays element:-");
+
+        for(int i = 0; i<arr.length; i++){
+            System.out.println(arr[i]);
+        }
     }
 }
