@@ -1,13 +1,11 @@
-import java.util.*;
-public class Gen{
+class Person{
+    public String name = "Anjeet";
+    private int age = 30;
+}
+public class Gen {
     public static void main(String args[]){
-        String str = "BHarti";
-
-        HashMap <Character, Integer> map = new HashMap<>();
-
-        for(char ch : str.toCharArray()){
-            map.put(ch, map.getOrDefault(ch, 0) + 1);
-        }
-        System.out.println(map);
+        Person p = new Person();//
+        System.out.println(p.name);
+        System.out.println(p.age);
     }
 }
