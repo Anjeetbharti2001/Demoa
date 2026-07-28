@@ -1,11 +1,10 @@
-class Person{
-    public String name = "Anjeet";
-    private int age = 30;
-}
+// Sort an Arrays In Accending Order
+import java.util.*;
 public class Gen {
+
     public static void main(String args[]){
-        Person p = new Person();//
-        System.out.println(p.name);
-        System.out.println(p.age);
+        int [] arr = {5, 2, 8, 1, 9};
+        Arrays.sort(arr);
+        System.out.println(Arrays.toString(arr));
     }
 }
