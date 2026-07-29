@@ -1,27 +1,14 @@
 public class Gen {
-    public static void main(String args[]){
-        int [] arr = {5, 2, 8, 1, 9};
+    public static void main(String args[]) {
+        int score = 75;
 
-        for(int i = 1; i<arr.length; i++){
-            int key = arr[i];
-            int j = i -1;
+        if (score >= 90) {
+            System.out.println("Excellent");
+        } else if (score >= 70) {
+            System.out.println("Good"); // This block will execute
+        } else {
+            System.out.println("Needs Improvement");
+        }
 
-            // for(int j = i + 1; j<arr.length; j++){
-            //     if(arr[j] < arr[minIndex]);
-            //     minIndex = j;
-            // }
-            while(j >= 0 && arr[i] > key){
-                arr[j + 1] = arr[j];
-                j--;
-            }
-            // int temp = arr[i];
-            // arr[i] = arr[minIndex];
-            // arr[minIndex] = temp;
-            arr[j + 1] = key;
-        }
-        for(int num : arr){
-            System.out.print(num + " ");
-        }
     }
-
 }
