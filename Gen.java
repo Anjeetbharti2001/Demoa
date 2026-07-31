@@ -1,16 +1,10 @@
 public class Gen {
     public static void main(String args[]){
-        int n = 10;
-        int first = 0; 
-        int second = 1;
-
-        System.out.println(first + " " + second + " ");
-
-        for(int i = 2; i<n; i++){
-            int next = first + second;
-            System.out.print(next +  " ");
-            first = second;
-            second = next;
+        int n = 5; 
+        int factorial = 1;
+        for(int i = 1; i<= n; i++){
+            factorial = factorial * 1;
         }
+        System.out.println("Factorial = " + factorial);
     }
 }
