@@ -1,25 +1,27 @@
+import java.util.*;
+
 public class Gen {
 
-    public static void permute(String str, String ans) {
-        // Base case
-        if (str.length() == 0) {
-            System.out.println(ans);
-            return;
-        }
+    public static void generateSubset(int[] arr) {
+        int n = arr.length;
 
-        // Recursive case
-        for (int i = 0; i < str.length(); i++) {
-            char ch = str.charAt(i);
+        // Total subsets = 2^n
+        for (int mask = 0; mask < (1 << n); mask++) {
+            System.out.print("{ ");
 
-            // Remove current character
-            String remaining = str.substring(0, i) + str.substring(i + 1);
+            for (int i = 0; i < n; i++) {
+                // Check if i-th bit is set
+                if ((mask & (1 << i)) != 0) {
+                    System.out.print(arr[i] + " ");
+                }
+            }
 
-            // Recursive call
-            permute(remaining, ans + ch);
+            System.out.println("}");
         }
     }
 
     public static void main(String[] args) {
-        permute("ABC", "");
+        int[] arr = {1, 2, 3, 4};
+        generateSubset(arr);
     }
 }
