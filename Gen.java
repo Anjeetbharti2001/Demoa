@@ -1,27 +1,16 @@
-import java.util.*;
-
 public class Gen {
+    public static void main(String args[]){
+        int n = 10;
+        int first = 0; 
+        int second = 1;
 
-    public static void generateSubset(int[] arr) {
-        int n = arr.length;
+        System.out.println(first + " " + second + " ");
 
-        // Total subsets = 2^n
-        for (int mask = 0; mask < (1 << n); mask++) {
-            System.out.print("{ ");
-
-            for (int i = 0; i < n; i++) {
-                // Check if i-th bit is set
-                if ((mask & (1 << i)) != 0) {
-                    System.out.print(arr[i] + " ");
-                }
-            }
-
-            System.out.println("}");
+        for(int i = 2; i<n; i++){
+            int next = first + second;
+            System.out.print(next +  " ");
+            first = second;
+            second = next;
         }
-    }
-
-    public static void main(String[] args) {
-        int[] arr = {1, 2, 3, 4};
-        generateSubset(arr);
     }
 }
