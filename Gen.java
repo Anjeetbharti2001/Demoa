@@ -1,10 +1,25 @@
+class Node {
+    int data;
+    Node next;
+    Node(int data){
+        this.data = data;
+    }
+}
 public class Gen {
     public static void main(String args[]){
-        int n = 5; 
-        int factorial = 1;
-        for(int i = 1; i<= n; i++){
-            factorial = factorial * 1;
+        Node first = new Node(3);
+        Node second = new Node(2);
+        Node third = new Node(1);
+
+        first.next = second;
+        second.next = third;
+
+        Node temp = first;
+
+
+        while(temp != null){
+            System.out.print(temp.data + " ");
+            temp = temp.next;
         }
-        System.out.println("Factorial = " + factorial);
     }
 }
