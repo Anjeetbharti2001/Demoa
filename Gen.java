@@ -8,14 +8,14 @@ class Node {
 }
 public class Gen {
     // Display Linked List 
-    public static void display(Node head){
-        Node temp = head;
+    public static int count(Node head){
+       int count = 0; 
+       while(head != null){
+        count++;
 
-        while(temp != null){
-            System.out.print(temp.data + " ");
-            temp = temp.next;
-        }
-        System.out.println();
+        head = head.next;
+       }
+       return count;
     }
     public static void main(String args[]){
         //Create nodes
@@ -33,8 +33,11 @@ public class Gen {
 
         Node head = first;
 
+        // Count Nodes 
+        int totalNodes = count(head);
+
         // Display the linked list
-        System.out.println("Linked list: ");
-        display(head);
+        System.out.println(" total Count Node: " + totalNodes );
+       
     }
 }
