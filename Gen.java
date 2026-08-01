@@ -8,14 +8,31 @@ class Node {
 }
 public class Gen {
     // Display Linked List 
-    public static int count(Node head){
-       int count = 0; 
-       while(head != null){
-        count++;
-
-        head = head.next;
+    public static void display(Node head){
+       Node temp = head;
+       
+       
+       while(temp != null){
+        System.out.print(temp.data + " ->");
+        temp = temp.next;
        }
-       return count;
+      System.out.println("null");
+    }
+    // Reverse Linked List
+    public static Node reverse(Node head){
+        Node prev = null;
+        Node curr = head;
+
+        while(curr != null){
+            Node next = curr.next;
+
+            curr.next = prev;
+
+            prev = curr;
+            curr = next;
+
+        }
+        return prev;
     }
     public static void main(String args[]){
         //Create nodes
@@ -33,11 +50,13 @@ public class Gen {
 
         Node head = first;
 
-        // Count Nodes 
-        int totalNodes = count(head);
+       System.out.println("Original Linked List:-");
+       display(head);
+
+       head = reverse(head);
 
         // Display the linked list
-        System.out.println(" total Count Node: " + totalNodes );
-       
+        System.out.println("reverse linked list" );
+        display(head);
     }
 }
