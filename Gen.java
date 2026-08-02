@@ -1,10 +1,17 @@
+import java.util.*;
+
 public class Gen {
-    public static void main(String args[]){
-        int n = 5; 
-        int factorial = 1;
-        for(int i = 1; i<= n; i++){
-           factorial = factorial * 1;
+
+    public static void main(String[] args) {
+
+        String str = "Programming";
+
+        HashMap<Character, Integer> map = new HashMap<>();
+
+        for (char ch : str.toCharArray()) {
+            map.put(ch, map.getOrDefault(ch, 0) + 1);
         }
-        System.out.println("Factorial = " + factorial );
+
+        System.out.println(map);
     }
 }
