@@ -1,19 +1,15 @@
 import java.util.*;
 public class Gen {
     public static void main(String args[]){
-        List<Integer> list1 = new ArrayList<>();
-        list1.add(10);
-        list1.add(20);
-        list1.add(30);
+      
+        List<Integer> list1 = List.of(10, 20, 30);
+        List<Integer> list2 = List.of(40, 50, 60);
 
-        List<Integer>list2 = new ArrayList<>();
-        list2.add(40);
-        list2.add(50);
-        list2.add(60);
+        List<Integer>mergedList = new ArrayList<>();
 
-        // Merge list2 into list1
-        list1.addAll(list2);
+        mergedList.addAll(list1);
+        mergedList.addAll(list2);
 
-        System.out.println("Merge list: " + list1);
+        System.out.println("Merge List : " + mergedList);
     }
 }
