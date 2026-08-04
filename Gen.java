@@ -1,34 +1,30 @@
-class Node{
+class Node {
     int data;
     Node next;
     Node (int data){
-      this.data = data;
-      this.next = null;
+        this.data = data;
+        this.next = null;
     }
 }
 public class Gen {
-    // traversal Function 
-    public static void traverse(Node head){
-        Node temp = head;
+    public static void main(String args[]){
+        Node first = new Node(50);
+        Node second = new Node (90);
+        Node third = new Node (55);
+        Node fourth = new Node (77);
+        Node fifth = new Node (40);
+
+        first.next = second;
+        second.next = third;
+        third.next = fourth;
+        fourth.next = fifth;
+
+
+        Node temp = first;
 
         while(temp != null){
-            System.out.print(temp.data + " ");
-            temp = temp.next;
+             System.out.println(temp.data + " ");
+             temp = temp.next;
         }
-        System.out.println();
-    }
-    public static void main(String args[]){
-        // Create a linked list 
-        Node head  = new Node(4);
-        head.next = new Node (5);
-        head.next.next = new Node(6);
-        head.next.next.next = new Node (7);
-        head.next.next.next.next = new Node (8);
-        head.next.next.next.next.next = new Node(9);
-
-        // Traversal Function
-        
-        System.out.println("Linked list :-");
-        traverse(head);
     }
 }
