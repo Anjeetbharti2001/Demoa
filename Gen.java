@@ -1,3 +1,4 @@
+// store data
 class Node {
     int data;
     Node next;
@@ -9,8 +10,7 @@ class Node {
 }
 
 public class Gen {
-
-    public static void travese(Node head) {
+    public static void traverse(Node head) {
         Node temp = head;
 
         while (temp != null) {
@@ -20,13 +20,11 @@ public class Gen {
     }
 
     public static void main(String args[]) {
-        // Create a node
-        Node head = new Node(4);
-        head.next = new Node(5);
-        head.next.next = new Node(7);
-        head.next.next.next = new Node(3);
+        // create node
+        Node head = new Node(8);
+        head.next = new Node(6);
+        head.next.next = new Node(5);
 
-        travese(head);
-
+        traverse(head);
     }
 }
