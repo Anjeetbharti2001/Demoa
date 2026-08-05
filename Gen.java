@@ -1,6 +1,6 @@
 public class Gen{
     public static void main(String args[]){
 
-        System.out.println("Anjeet bharti");
+        System.out.println(5 + " " + 5);
     }
 }
