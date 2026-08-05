@@ -1,5 +1,5 @@
 public class Gen{
     public static void main(String args[]){
-        System.out.println(21 + 40);
+        System.out.println("Hi Anjeet ");
     }
 }
