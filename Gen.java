@@ -1,5 +1,5 @@
 public class Gen{
     public static void main(String args[]){
-        System.out.println("Hi Anjeet ");
+        System.out.println(5);
     }
 }
