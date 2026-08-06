@@ -1,6 +1,9 @@
 public class Gen{
     public static void main(String args[]){
-
-        System.out.println(5 + " " + 5);
+        message();
+        System.out.println("cry , and you stop the monotony!");
+    }
+    static void message(){
+       System.out.println("Smile , and the world smile with you..");
     }
 }
