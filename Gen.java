@@ -1,5 +1,5 @@
 public class Gen {
     public static void main(String args[]){
-        System.out.println("Hello " + "World" +  5 + " end1" + 2);
+        System.out.println("Hello_" + "\n" +  5 + "World");
     }
 }
