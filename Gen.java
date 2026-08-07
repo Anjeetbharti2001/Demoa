@@ -1,6 +1,9 @@
 public class Gen {
   public static void main(String args[]){
-    long num = 16734524339L;
-    System.out.println(num);
+    int x = 20;
+    int y = 6;
+    int div = x / y;
+
+    System.out.println(div);
   }
 }
