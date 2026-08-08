@@ -1,7 +1,10 @@
-public class Gen{
+public class Gen {
   public static void main(String args[]){
-    int a = 5, b = 10;
+    int a = 10;
+    int b = 20;
 
-    System.out.println("Sum = " + (a + b));
+    int sum = a + b;
+
+    System.out.println("Sum = " + sum );
   }
 }
