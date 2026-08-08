@@ -1,30 +1,21 @@
-
+// moves all zero to end
 public class Gen {
-
-    public static int removeDuplicates(int[] arr) {
-        int i = 0;
-
-        for (int j = 1; j < arr.length; j++) {
-
-            if (arr[i] != arr[j]) {
-                i++;
-                arr[i] = arr[j];
-            }
-        }
-
-        return i + 1;
+  public static void moveZeros(int arr[]){
+    int j = 0;
+    for(int i = 0; i<arr.length; i++){
+      if(arr[i] != 0){
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+        j++;
+      }
     }
-
-    public static void main(String[] args) {
-
-        int[] arr = {1, 1, 2, 2, 3, 4, 4};
-
-        int n = removeDuplicates(arr);
-
-        System.out.println("Unique elements: " + n);
-
-        for (int i = 0; i < n; i++) {
-            System.out.print(arr[i] + " ");
-        }
+    for(int x : arr){
+      System.out.println(x + " ");
     }
+  }
+  public static void main(String args[]){
+    int arr[] = {0, 1, 0, 3, 1, 2};
+    moveZeros(arr);
+  }
 }
