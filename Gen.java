@@ -1,27 +1,30 @@
-class Node {
-  int data;
-  Node next;
-
-  Node(int data) {
-    this.data = data;
-    this.next = null;
-  }
-}
 
 public class Gen {
-  public static void main(String args[]) {
-    Node First = new Node(10);
-    Node second = new Node(29);
-    Node third = new Node(19);
 
-    First.next = second;
-    second.next = third;
+    public static int removeDuplicates(int[] arr) {
+        int i = 0;
 
-    Node temp = First;
+        for (int j = 1; j < arr.length; j++) {
 
-    while (temp != null) {
-      System.out.println(temp.data + " ");
-      temp = temp.next;
+            if (arr[i] != arr[j]) {
+                i++;
+                arr[i] = arr[j];
+            }
+        }
+
+        return i + 1;
     }
-  }
+
+    public static void main(String[] args) {
+
+        int[] arr = {1, 1, 2, 2, 3, 4, 4};
+
+        int n = removeDuplicates(arr);
+
+        System.out.println("Unique elements: " + n);
+
+        for (int i = 0; i < n; i++) {
+            System.out.print(arr[i] + " ");
+        }
+    }
 }
