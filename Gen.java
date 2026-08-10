@@ -7,6 +7,7 @@ public class Gen{
     Stack.push(20);
     Stack.push(20);
     Stack.push(28);
+    Stack.isEmpty();
     
     System.out.println(Stack);
 
@@ -18,7 +19,12 @@ public class Gen{
     // System.out.println(Stack);
 
     // Size
-    System.out.println("Size : " + Stack.size());
+    // System.out.println("Size : " + Stack.size());
+    // System.out.println(Stack);
+
+    // Empty
+
+    System.out.println("IsEmpty :-" + Stack.isEmpty());
     System.out.println(Stack);
   }
 }
