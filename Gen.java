@@ -11,10 +11,14 @@ public class Gen{
     System.out.println(Stack);
 
     // peek
-    System.out.println("Top Element :-" + Stack.peek());
+    // System.out.println("Top Element :-" + Stack.peek());
 
-    // pop
-    System.out.println("Remove :- " + Stack.pop());
+    // // pop
+    // System.out.println("Remove :- " + Stack.pop());
+    // System.out.println(Stack);
+
+    // Size
+    System.out.println("Size : " + Stack.size());
     System.out.println(Stack);
   }
 }
