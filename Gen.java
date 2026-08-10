@@ -9,5 +9,9 @@ public class Gen{
     Stack.push(28);
     
     System.out.println(Stack);
+
+    // peek
+    System.out.println("Top Element :-" + Stack.peek());
+    
   }
 }
