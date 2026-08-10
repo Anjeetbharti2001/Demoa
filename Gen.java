@@ -12,6 +12,9 @@ public class Gen{
 
     // peek
     System.out.println("Top Element :-" + Stack.peek());
-    
+
+    // pop
+    System.out.println("Remove :- " + Stack.pop());
+    System.out.println(Stack);
   }
 }
