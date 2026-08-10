@@ -1,8 +1,13 @@
 import java.util.*;
-public class Gen {
+
+public class Gen{
   public static void main(String args[]){
-    int a = Integer.parseInt(args[0]);
-    int b = Integer.parseInt(args[1]);
-    System.out.println("Sum : " + (a + b));
+    Stack<Integer> Stack = new Stack<>();
+    //push 
+    Stack.push(20);
+    Stack.push(20);
+    Stack.push(28);
+    
+    System.out.println(Stack);
   }
 }
