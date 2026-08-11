@@ -1,6 +1,6 @@
 public class Gen {
   public static void main(String args[]){
-    int []arr = {5, 2, 8, 1, 9};
+    int []arr = {5, 9, 8, 6, 3};
     
 
     int[] prefix = new int [arr.length];
