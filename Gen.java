@@ -1,16 +1,24 @@
-import java.util.*;
+class TreeNode{
+  int data;
+  TreeNode left;
+  TreeNode right;
 
-public class Gen{
+  TreeNode(int data){
+    this.data = data;
+    left = null;
+    right = null;
+  }
+}
+public class Gen {
   public static void main(String args[]){
-    PriorityQueue<Integer> pq = new PriorityQueue<>();
+    TreeNode root = new TreeNode(10);
 
-    pq.add(30);
-    pq.add(10);
-    pq.add(20);
+    root.left = new TreeNode(5);
+    root.right = new TreeNode(15);
 
+    root.left.left = new TreeNode(3);
+    root.right = new TreeNode(7);
 
-    System.out.println(pq.poll());
-    System.out.println(pq.poll());
-    System.out.println(pq.poll());
+    System.out.println(root.data);
   }
 }
