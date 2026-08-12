@@ -1,9 +1,13 @@
+import java.util.*;
 public class Gen{
     public static void main(String args[]){
-        StringBuilder sb = new StringBuilder("hello");
+        String str = "hello";
 
-        sb.append("java");
-        sb.reverse();
-        System.out.println(sb);
+        HashMap<Character, Integer>map = new HashMap<>();
+
+        for(char ch : str.toCharArray()){
+            map.put(ch, map.getOrDefault(ch, 0) + 1);
+        }
+        System.out.println(map);
     }
 }
