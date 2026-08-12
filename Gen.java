@@ -1,15 +1,19 @@
+import java.util.*;
 public class Gen {
   public static void main(String args[]){
-    int []arr = {5, 9, 8, 6, 3};
-    
+    int arr[] = {3, 1, 5, 12, 2, 11};
 
-    int[] prefix = new int [arr.length];
+    int k = 3;
 
-    prefix[0] = arr[0];
+    PriorityQueue<Integer> minHeap = new PriorityQueue<>();
 
-    for(int i = 1; i<arr.length; i++){
-      prefix [i] = prefix[i - 1] + arr[i];
+    for(int num : arr){
+      minHeap.add(num);
+
+      if(minHeap.size() > k){
+        minHeap.poll();
+      }
     }
-    System.out.println("Total sum = " + prefix[arr.length - 1]);
+    System.out.println("Top " + k + "Elements " + minHeap);
   }
 }
