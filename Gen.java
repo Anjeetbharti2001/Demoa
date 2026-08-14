@@ -1,15 +1,25 @@
-import java.util.*;
+class TreeNode {
+    int data;
+    TreeNode left;
+    TreeNode right;
+
+    TreeNode(int data){
+        this.data = data;
+        left = null;
+        right = null;
+    }
+}
+
 public class Gen {
     public static void main(String args[]){
-        String str = "anjeet";
-        Stack<Character> Stack = new Stack<>();
+        TreeNode root = new TreeNode(10);
 
-        for(char ch : str.toCharArray()){
-            Stack.push(ch);
-        }
-        while(!Stack.isEmpty()){
-            System.out.println(Stack.pop());
-        }
-        
+        root.left = new TreeNode(5);
+        root.right = new TreeNode(15);
+
+        root.left.left = new TreeNode(3);
+        root.left.right = new TreeNode(7);
+
+        System.out.println(root.data);
     }
 }
