@@ -1,30 +1,15 @@
 import java.util.*;
-
 public class Gen {
+    public static void main(String args[]){
+        String str = "anjeet";
+        Stack<Character> Stack = new Stack<>();
 
-    static boolean isBalanced(String str) {
-        Stack<Character> stack = new Stack<>();
-
-        for (char ch : str.toCharArray()) {
-
-            if (ch == '(') {
-                stack.push(ch);
-            } 
-            else if (ch == ')') {
-
-                if (stack.isEmpty()) {
-                    return false;
-                }
-
-                stack.pop();
-            }
+        for(char ch : str.toCharArray()){
+            Stack.push(ch);
         }
-
-        return stack.isEmpty();
-    }
-
-    public static void main(String args[]) {
-        System.out.println(isBalanced("()()")); // true
-        System.out.println(isBalanced("(()"));  // false
+        while(!Stack.isEmpty()){
+            System.out.println(Stack.pop());
+        }
+        
     }
 }
