@@ -1,9 +1,12 @@
 public class Gen {
     public static void main(String args[]){
-        int a = 5;
-        int b = 8;
+        int m = 9,n = 5;
+        System.out.println("Before swapping : m = " + m + ", n = " + n);
 
-        int sum = a + b;
-        System.out.println("Total sum :-" + sum);
+        int temp = m;
+        m = n;
+        n = temp;
+
+        System.out.println("After swapping : m = " + m + ", n = " + n);
     }
 }
