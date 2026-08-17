@@ -1,24 +1,22 @@
 public class Gen {
-    public void decToBinary(int n){
-        for(int i = 31; i >= 0; i--){
-            int k = n >> i;
+    static int decimalToBinary(int N){
+        int B_Number = 0;
+        int cnt = 0;
 
-            if((k & 1) > 0){
-                System.out.print("1");
-            }else{
-                System.out.print("0");
-            }
+        while(N != 0){
+            int rem = N % 2;
+            Double c = Math.pow(10, cnt);
+            B_Number += rem * c ;
+            N /= 2;
+
+            cnt++;
         }
-    }
-    class geek{
-        
+        return B_Number;
     }
     public static void main(String args[]){
-        Gen g = new Gen();
-        int n = 32;
-        System.out.println("Decimal - " + n);
-        System.out.print("Binary - ");
-
-        g.decToBinary(n);
+        int N = 17;
+        System.out.println("Decimal - " + N);
+            System.out.print("Binary - ");
+        System.out.println(decimalToBinary(N));    
     }
 }
