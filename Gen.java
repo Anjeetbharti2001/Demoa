@@ -1,43 +1,24 @@
-import java.util.*;
-class Job{
-    char id ;
-    int deadline, profit;
-
-    Job(char id, int deadline, int profit){
-        this.id = id;
-        this.deadline = deadline;
-        this.profit = profit;
-    }
-}
 
 public class Gen {
+
+    static void decToBinary(int n){
+        int[] binaryNum = new int[1000];
+
+        int i = 0;
+
+        while(n > 0){
+            binaryNum[i] = n % 2;
+            n = n/2;
+            i++;
+        }
+        for(int j = i - 1; j >= 0; j--){
+            System.out.print(binaryNum[j]);
+        }
+    }
     public static void main(String args[]){
-        Job[] jobs = {
-            new Job('A', 2, 100),
-            new Job('b', 1, 19),
-            new Job('c', 2, 27),
-            new Job('d', 1,25),
-            new Job('E', 3, 15 ),
-        };
-        Arrays.sort(jobs, (a, b) -> b.profit - a.profit);
-
-        int maxDeadline = 3;
-        char[] result = new char [maxDeadline];
-        boolean[] slot = new boolean[maxDeadline];
-
-        for(Job job : jobs){
-            for(int j = Math.min(maxDeadline, job.deadline) - 1; j>= 0; j--){
-                if(!slot[j]){
-                    slot[j] = true;
-                    result[j] = job.id;
-                    break;
-                }
-            }
-        }
-        System.out.println("Job sequence: ");
-
-        for(char c : result){
-            System.out.print(c + " ");
-        }
+        int n = 17;
+        System.out.println("Decimal - " + n);
+        System.out.print("Binary - ");
+        decToBinary(n);
     }
 }
